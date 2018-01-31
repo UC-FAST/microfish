@@ -1,0 +1,14 @@
+<?php
+$wd=$_GET["wd"];
+if($wd=="")
+{
+    header("Location:../search.html");
+    exit;
+}
+else
+{
+    $url="Location:https://www.baidu.com/s?wd=".$wd;
+    header($url);
+    exit;
+}
+?>

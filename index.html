@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>小金鱼学习网</title>
+        <link rel="shortcut icon" href="pict/logo.ico" />
+    </head>
+        <style type="text/css">
+            body{
+	background-attachment: fixed;
+	background-color: #CDCDC1;
+	background :url(http://p2.gexing.com/shaitu/20121021/1646/5083b67eef537.jpg) no-repeat fixed top;
+        background-size:100%
+	background-repeat: space;
+	list-style-type: square;
+            }
+            @keyframes snow{
+                0% {
+                    background-position: 0 0, 0 0;
+                }
+                100% {
+                    background-position: 500px 1000px, 500px 500px;
+                }
+            }
+            @-webkit-keyframes snow{
+                0% {
+                    background-position: 0 0, 0 0;
+                }
+                100% {
+                    background-position: 500px 1000px, 500px 500px;
+                }
+            }
+            #snowMask {
+                position: fixed;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 999;
+                background: url(pict/snow1.png),url(pict/snow2.png);
+                pointer-events: none;
+                -webkit-animation: snow 15s linear infinite;
+                animation: snow 15s linear infinite;
+            }
+        </style>
+        <script type="text/javascript">
+            (function(){
+                var snowMask = document.querySelector('#snowMask');
+                function isIE() {
+                    if (!!window.ActiveXObject || "ActiveXObject" in window)
+                        return true;
+                    else
+                        return false;
+                }
+                snowMask.style.display = (!isIE())?"block":"none";
+            })();
+        </script>
+    <body>
+        <div id="snowMask" style="display: block;"></div>
+    </body>
+</html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+    *{padding:0;}
+    body{text-align:center;}
+    *{margin:0 auto;}
+  #main{width: 1200px; height: 80px; text-align:left;margin-bottom:50px;}
+	#daohang{width:1200px;height:55px; line-height:80px;}
+	.box1{height:45px;float:left;margin-top:10px;
+		 width:500px;border-bottom-width:5px;}
+    .sou{width:500px; height:35px;position:absolute;margin-left:800px;margin-top:10px;}
+	#box2{width:1200px;height: 500px;;position:relative;}
+	#box3{width: 20%;height: 500px;float: left;line-height:300px}
+	.wrap{background:#EFEFEF; width:600px; height:400px; float:left; overflow: hidden; position: relative; margin:0 auto;}
+    #pic img { width:600px; height: 400px; }
+    .wrap ul {margin: 0px; padding: 0px; width:100%; height:100%;overflow: hidden; list-style: none;}
+    .wrap ul li{ display: none; }
+    .wrap ol{margin: 0px auto; padding: 0px; left: 800px; bottom: 20px;  position: relative;}
+    .wrap ol li{height:16px; width: 25px;
+                background:#ccc; color: #000; font-size: 12px; display: block;
+                border:solid 1px #666;
+                margin-left:1px;
+                color:#000;
+                float:left;
+                line-height:center;
+                text-align:center;
+                cursor:pointer;}
+    .wrap ol .on{display:block; position:left;color:#ffffff;}
+	#foot{width:1200px;height:200px;}
+	.box1 ul li{list-style:none;
+        float:left; 
+       font-size:16px;width:80px;height:35px;
+	   line-height:35px;
+	   text-align:center;} 
+  .box1 ul li a{display:block;}
+   a:hover{
+	color: #FF000;
+  }
+  a:link{
+        color: #ffffff;
+  }
+a:visited{color:#ffffff;}
+  .sou input[type="submit"] { background:url(pict/icon-search.png) center no-repeat;
+   margin:0px; padding:0px; width:100px; height:35px; line-height:35px; }
+   input[type="submit"] { padding:4px 17px; color:#ffff; border:none; font-size:20px;
+	 background:url(gradient.png) bottom repeat-x; cursor:pointer;  float:left; }
+  .sou input[type="submit"]:hover { background-color:#00ff00;}
+	.sou input[type='submit'] { background-color:#ffffff; }
+  .sou input[type="text"] { 
+		background:#F7F7F7;
+		border:none;
+		float:left;		
+		padding:0px 10px 0px 15px;
+		margin:0px;
+		width:250px; 
+		height:35px;
+		color:#000000;
+		line-height:35px;}
+</style>
+<script type="text/javascript"> 
+   window.onload=function(){
+ var wrap=document.getElementById('wrap'),
+  pic=document.getElementById('pic').getElementsByTagName("li"),
+  list=document.getElementById('list').getElementsByTagName('li'),
+  index=0,
+  timer=null;
+ 
+  // 定义并调用自动播放函数
+ timer = setInterval(autoPlay, 4000);
+ 
+  // 鼠标划过整个容器时停止自动播放
+ wrap.onmouseover = function () {
+  clearInterval(timer);
+ }
+ 
+  // 鼠标离开整个容器时继续播放至下一张
+ wrap.onmouseout = function () {
+  timer = setInterval(autoPlay, 4000);
+ }
+  // 遍历所有数字导航实现划过切换至对应的图片
+ for (var i = 0; i < list.length; i++) {
+  list[i].onmouseover = function () {
+  clearInterval(timer);
+  index = this.innerText - 1;
+  changePic(index);
+  };
+ };
+ 
+ function autoPlay () {
+  if (++index >= pic.length) index = 0;
+  changePic(index);
+ }
+ 
+  // 定义图片切换函数
+ function changePic (curIndex) {
+  for (var i = 0; i < pic.length; ++i) {
+  pic[i].style.display = "none";
+  list[i].className = "";
+  }
+  pic[curIndex].style.display = "block";
+  list[curIndex].className = "on";
+ }
+ 
+ };
+ 
+ </script> 
+<font color="#ffffff" family="宋体"> <script>setInterval("time.innerHTML='今天是'+new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay())+' ';",1000);</script> 
+</head>
+
+<body>
+	<div id="main">
+	   <a href="."><img src="pict/logo.png" width="240" height="134" /></a>	
+	</div>
+    <div id="daohang">
+	<div class="box1">
+	 <ul>
+     <li><a href="bbs/" style="text-decoration:none;" title="" target="_blank">论坛主页</font></a></li>  
+     <li><a href="*" style="text-decoration:none;" title="" target="_blank">资源搜索</font></a></li>
+     <li><a href="#" style="text-decoration:none;" title="" target="_blank">精彩视频</font></a></li> 
+     <li><a href="#" style="text-decoration:none;" title="" target="_blank">积分兑换</font></a></li> 
+     <li><a href="#" style="text-decoration:none;" title="" target="_blank">幸运抽奖</font></a></li>  
+     <li><a href="http://stat.jseea.cn/jseea_query/querycenter.html" style="text-decoration:none;" title="" target="_blank">查询中心</font></a></li>
+     </ul>
+	</div>
+
+    <div class="sou">
+    <form action="search_files/search.php" method="get">
+        <input type="text" name="wd">
+        <input type="submit" value="">
+    </form>
+    </div></div>
+	<div id="box2">
+	<div id="box3"></div>
+	<div id="wrap" class="wrap">
+	<ul id="pic" >
+  <li><img src="https://raw.githubusercontent.com/UC-FAST/microfish/master/pict/%E5%85%83%E9%98%B3%E6%A2%AF%E7%94%B0.jpg" alt="元阳梯田"></li>
+  <li><img src="http://www.xiangdaoer.com/uploads/2015/07/311720573527.jpg" alt="蜕变的记忆的永恒"></li>
+  <li><img src="https://raw.githubusercontent.com/UC-FAST/microfish/master/pict/foggy%20night.jpg" alt="foggy night"></li>
+  <li><img src="http://img.mp.itc.cn/upload/20160915/f14ad37a24414d4a8dafec114ba467d3_th.jpeg" alt="SpaceX"></li>
+ </ul>
+ <ol id="list">
+  <li class="on">1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+ </ol> 
+	</div></div>
+	<div id="foot">
+    <div id=time></div></div>
+ <!--友情链接和版权信息-->
+         <div id="about">
+            <tr>
+                <td align="center">
+                    <a href="about.html"><font>关于我们</font></a>
+                    <a href="404.html"><font>招贤纳士</font></a>
+                    <a href="#"><font>法律声明</font></a>
+                    <a href="#"><font>友情链接</font></a>
+                    <a href="#"><font>广告声明</font></a>
+                    <p>
+                    </p>
+                </td>
+            </tr>
+         </div>
+</body>
+</html>

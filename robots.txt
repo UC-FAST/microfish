@@ -1,0 +1,16 @@
+# robots.txt for http://microfish.vicp.hk and friends
+#
+# Please note: There are a lot of pages on this site, and there are
+# some misbehaved spiders out there that go _way_ too fast. If you're
+# irresponsible, your access to the site may be blocked.
+
+# Friendly, low-speed bots are welcome viewing article pages, but not
+# manage pages please.
+
+# There is a special exception for API mobileview to allow dynamic
+# mobile web & app views to load section content.
+# These views aren't HTTP-cached but use parser cache aggressively
+# and don't expose special: pages etc.
+
+User-agent: *
+Disallow: /manage/

@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <link rel="icon" href="../pict/logo.ico" type="image/x-icon"/>
+    <title>语文论坛</title>
+    <style>
+    .hlong *{display:inline-block;vertical-align:middle}
+    </style>
+    <body>
+    <div class="hlong">
+    
+
+    </div>
+    </body>
+
+
+    <title>语文论坛</title>
+    <!-- Bootstrap -->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+    	body{
+    		padding-top: 50px;
+    	}
+    	.nav-pills{
+    		background-color: #ddd;
+    	}
+    	.nav-pills>li{
+    		margin-top: 20px;
+    	}
+    	.nav-pills>li>a {
+		    border-radius: 0;
+		}
+		.col-md-2{
+			padding-left: 0;
+			padding-right: 0;
+			height: 400px;
+			background-color: #ddd;
+		}
+		.col-md-6{
+			margin-top: 20px;
+			padding-left: 0;
+		}
+		.row{
+			margin-right: -45px;
+		}
+		.badge{
+			float: right;
+		}
+		.panel-body>a{
+			display: block;
+		}
+</style>
+  </head>
+  <body>
+  <!-- 顶部固定导航条 -->
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#"></a>
+	    </div>
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <li class="active"><a href="../index.html">首页 <span class="sr-only">(current)</span></a></li>
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">学习资料 <span class="caret"></span></a>
+	          <ul class="dropdown-menu">
+	  			<li class="dropdown-header">分类</li>
+	            <li><a href="index.html">语文</a></li>
+	            <li><a href="math.html">数学</a></li>
+	            <li><a href="english.html">英语</a></li>
+                    <li><a href="dz.html">电子</a></li>
+                    <li><a href="dg.html">电工</a></li>
+	            <li role="separator" class="divider"></li>
+	  			<li class="dropdown-header">系统功能</li>
+	            <li><a href="../404">设置</a></li>
+	          </ul>
+	        </li>
+	        <li><a href="../404.html">帮助</a></li>
+	      </ul>
+	      <form class="navbar-form navbar-right" action="../404.html">
+	        <div class="form-group">
+	          <input type="text" class="form-control" placeholder="用户名..">
+	        </div>
+	        <div class="form-group">
+	          <input type="text" class="form-control" placeholder="密码..">
+	        </div>
+	        <button type="submit" class="btn btn-default">登录</button>
+	      </form>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+	<!-- 图片轮播 -->
+	
+	<!-- 系统 -->
+	<div class="container-fluid">
+	<div class="row" border-radius="0">
+	  <div class="col-md-2">
+		  <ul class="nav nav-pills nav-stacked">
+			  <li role="presentation" class="active"><a href="../index.html">首页</a></li>
+		  </ul>
+		  <ul class="nav nav-pills nav-stacked">
+			  <li role="presentation"><a href="index.html">语文</a></li>
+			  <li role="presentation"><a href="math.html">数学</a></li>
+			  <li role="presentation"><a href="english.html">英语</a></li>
+              <li role="presentation"><a href="dz.html">电子</a></li>
+			  <li role="presentation"><a href="dg.html">电工</a></li>
+		  </ul>
+		  <ul class="nav nav-pills nav-stacked">
+			  <li role="presentation"><a href="../404.html">设置</a></li>
+			  <li role="presentation"><a href="../404.html">帮助</a></li>
+		  </ul>
+	  </div>
+	  <div class="col-md-10">
+		<div class="container-fluid">
+	  	<h2>语文</h2>
+	  	<hr>
+	  	<!-- Standard button -->
+		<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+		<button type="button" class="btn btn-primary">（首选项）Primary</button>
+		<!-- Indicates a successful or positive action -->
+		<button type="button" class="btn btn-success">（成功）Success</button>
+		<!-- Contextual button for informational alert messages -->
+		<button type="button" class="btn btn-info">（信息）Info</button>
+		<!-- Indicates caution should be taken with this action -->
+		<button type="button" class="btn btn-warning">（警告）Warning</button>
+		<!-- Indicates a dangerous or potentially negative action -->
+		<button type="button" class="btn btn-danger">（危险）Danger</button>
+		<!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+		<button type="button" class="btn btn-link">（链接）Link</button>
+		<div class="col-md-6">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+   					<h3 class="panel-title">笔记</h3>
+ 				</div>
+  				<div class="panel-body">
+    				<div class="alert alert-success" role="alert">笔记1</div>
+					<div class="alert alert-info" role="alert">笔记2</div>
+  				</div>
+  			</div>
+			<div class="panel panel-success">
+				<div class="panel-heading">
+   					<h3 class="panel-title">表格</h3>
+ 				</div>
+  				<div class="panel-body">
+  				<table class="table table-striped">
+    				<tr class="active">
+						<th>标题</th>
+						<th>标题</th>
+						<th>标题</th>
+						<th>标题</th>
+						<th>标题</th>
+    				</tr>
+					<tr class="success">
+						<td>内容</td>
+						<td>内容</td>
+						<td>内容</td>
+						<td>内容</td>
+						<td>内容</td>
+					</tr>
+					<tr class="warning">
+						<td>内容</td>
+						<td>内容</td>
+						<td>内容</td>
+						<td>内容</td>
+						<td>内容</td>
+					</tr>
+				</table>
+  				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+   					<h3 class="panel-title">进度条</h3>
+ 				</div>
+  				<div class="panel-body">
+    				<p>完成进度:</p>
+    				<div class="progress">
+					<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+					    60%
+					</div>
+					</div>
+  				</div>
+			</div>
+			<div class="panel panel-warning">
+				<div class="panel-heading">
+   					<h3 class="panel-title">徽章导航</h3>
+ 				</div>
+  				<div class="panel-body">
+    				<a href="#">Messages12345 <span class="badge">21</span></a>
+    				<a href="#">Messages12345 <span class="badge">22</span></a>
+    				<a href="#">Messages12345 <span class="badge">52</span></a>
+    				<a href="#">Messages12345 <span class="badge">24</span></a>
+  				</div>
+			</div>
+		</div>
+		</div>
+	  </div>
+	</div>
+	</div>
+
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+
+    <script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

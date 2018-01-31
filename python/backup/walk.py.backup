@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+import os
+rootdir='/var/www/html'
+with open('walk.out','w') as f:
+    for dirname,dir,filelist in os.walk(rootdir):
+        f.write('%s\n'%dirname)
+        for fina in filelist:
+            f.write('\t%s\n'%fina)

@@ -1,0 +1,84 @@
+root dir:/var/www/html
+---------------------------------
+/html
+   ['bbs', 'pict', 'python', '.well-known', 'manage', 'search_files']
+   |---.htaccess.backup
+   |---github-hunter.html
+   |---rgb.html
+   |---robots.txt
+   |---search.html.save
+   |---404.html
+   |---about.html
+   |---index.html
+   |---baidu_verify_AIIIMTcp4h.html
+   |---baidu.html
+---------------------------------
+/html/bbs
+   |---english.html
+   |---dg.html
+   |---dz.html
+   |---math.html
+   |---index.html
+---------------------------------
+/html/pict
+   ['backup']
+   |---background1.jpg.
+   |---foggy night.jpg
+   |---server.jpg
+   |---icon-search.png
+   |---logo.png
+   |---qrcode.jpg
+   |---SpaceX.jpg
+   |---snow2.png
+   |---yuanyang.jpg
+   |---logo.ico
+   |---snow1.png
+   |---background.jpg
+   |---memory.jpg
+---------------------------------
+/html/pict/backup
+   |---logo1.jpg
+   |---logo0.jpg
+   |---logo2.png
+   |---logo.jpg.backup
+   |---memory.big.jpg
+   |---logo.ico.backup
+   |---foggy night.big.jpg
+   |---yuanyang.big.jpg
+   |---SpaceX.big.jpg
+---------------------------------
+/html/python
+   ['backup']
+   |---result.json
+   |---walk.py
+   |---oray.py
+   |---access.log
+---------------------------------
+/html/python/backup
+   |---oray.py.backup
+   |---walk.py.backup
+---------------------------------
+/html/.well-known
+   ['pki-validation']
+---------------------------------
+/html/.well-known/pki-validation
+   |---fileauth.txt
+---------------------------------
+/html/manage
+   |---result.json
+   |---walk.out
+   |---test.php
+   |---login.php
+   |---oray.php
+   |---mm.html
+   |---mm.php
+   |---console.php
+   |---manager.json
+   |---index.html
+   |---walk.php
+---------------------------------
+/html/search_files
+   |---search.php
+   |---baidu_jgylogo3.gif
+   |---logo.js
+   |---start.png
